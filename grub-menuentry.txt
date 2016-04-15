@@ -1,0 +1,17 @@
+menuentry 'Test' {
+    recordfail
+    savedefault
+    load_video
+    gfxmode $linux_gfx_mode
+    insmod gzio
+    insmod part_gpt
+    insmod ext2
+    set root='hd1,gpt1'
+    if [ x$feature_platform_search_hint = xy ]; then
+      search --no-floppy --fs-uuid --set=root --hint-bios=hd1,gpt1 --hint-efi=hd1,gpt1 --hint-baremetal=ahci1,gpt1  a4a2187d-a2d2-4a4c-9746-be511c151296
+    else
+      search --no-floppy --fs-uuid --set=root a4a2187d-a2d2-4a4c-9746-be511c151296
+    fi
+    linux   /boot/kimage-test root=UUID=a4a2187d-a2d2-4a4c-9746-be511c151296 ro  quiet splash $vt_handoff
+    initrd /boot/initrd.img-test
+}

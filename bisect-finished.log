@@ -1,0 +1,34 @@
+git bisect start
+# bad: [d8ec26d7f8287f5788a494f56e8814210f0e64be] Linux 3.13
+git bisect bad d8ec26d7f8287f5788a494f56e8814210f0e64be
+# good: [5e01dc7b26d9f24f39abace5da98ccbd6a5ceb52] Linux 3.12
+git bisect good 5e01dc7b26d9f24f39abace5da98ccbd6a5ceb52
+# bad: [42a2d923cc349583ebf6fdd52a7d35e1c2f7e6bd] Merge git://git.kernel.org/pub/scm/linux/kernel/git/davem/net-next
+git bisect bad 42a2d923cc349583ebf6fdd52a7d35e1c2f7e6bd
+# bad: [4b4d2b463461f1b86fd89353184e6f2938e7566b] Merge tag 'h8300-for-linus' of git://git.kernel.org/pub/scm/linux/kernel/git/groeck/linux-staging
+git bisect bad 4b4d2b463461f1b86fd89353184e6f2938e7566b
+# good: [c224b76b560f3c65f0d10fbb59d3f00379eb0aaf] Merge tag 'nfs-for-3.13-1' of git://git.linux-nfs.org/projects/trondmy/linux-nfs
+git bisect good c224b76b560f3c65f0d10fbb59d3f00379eb0aaf
+# good: [f9efbce6334844c7f8b9b9459f6d7a6fbc2928e0] Merge tag 'dt-for-linus' of git://git.kernel.org/pub/scm/linux/kernel/git/arm/arm-soc
+git bisect good f9efbce6334844c7f8b9b9459f6d7a6fbc2928e0
+# good: [caea6cf52139116e43e615d87fcbf9823e197fdf] Merge branch 'uprobes/core' of git://git.kernel.org/pub/scm/linux/kernel/git/oleg/misc into perf/core
+git bisect good caea6cf52139116e43e615d87fcbf9823e197fdf
+# bad: [39cf275a1a18ba3c7eb9b986c5c9b35b57332798] Merge branch 'sched-core-for-linus' of git://git.kernel.org/pub/scm/linux/kernel/git/tip/tip
+git bisect bad 39cf275a1a18ba3c7eb9b986c5c9b35b57332798
+# good: [746023159c40c523b08a3bc3d213dac212385895] sched: Fix race in migrate_swap_stop()
+git bisect good 746023159c40c523b08a3bc3d213dac212385895
+# good: [edae583a6d4d1ad2eb73981787790993fef1bbad] Merge tag 'arc-v3.13-rc1-part1' of git://git.kernel.org/pub/scm/linux/kernel/git/vgupta/arc
+git bisect good edae583a6d4d1ad2eb73981787790993fef1bbad
+# good: [70fdcb83db15c85a0495b07dc55d9347a4c2efd9] Merge branch 'core-rcu-for-linus' of git://git.kernel.org/pub/scm/linux/kernel/git/tip/tip
+git bisect good 70fdcb83db15c85a0495b07dc55d9347a4c2efd9
+# bad: [37dc6b50cee97954c4e6edcd5b1fa614b76038ee] sched: Remove unnecessary iteration over sched domains to update nr_busy_cpus
+git bisect bad 37dc6b50cee97954c4e6edcd5b1fa614b76038ee
+# good: [927b54fccbf04207ec92f669dce6806848cbec7d] sched: Fix hrtimer_cancel()/rq->lock deadlock
+git bisect good 927b54fccbf04207ec92f669dce6806848cbec7d
+# good: [7d716456a0ee4e9bd63be9234f886d20382ac950] sched/wait: Fix __wait_event_interruptible_lock_irq_timeout()
+git bisect good 7d716456a0ee4e9bd63be9234f886d20382ac950
+# good: [b4145872f7049e429718b40b86e1b46659988398] sched: Move wait code from core.c to wait.c
+git bisect good b4145872f7049e429718b40b86e1b46659988398
+# good: [2042abe7977222ef606306faa2dce8fd51e98e65] sched: Fix asymmetric scheduling for POWER7
+git bisect good 2042abe7977222ef606306faa2dce8fd51e98e65
+# first bad commit: [37dc6b50cee97954c4e6edcd5b1fa614b76038ee] sched: Remove unnecessary iteration over sched domains to update nr_busy_cpus
