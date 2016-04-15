@@ -20,6 +20,20 @@ On the linked StackOverflow page, Greg Glockner [found](http://stackoverflow.com
 
 So I bisected the kernel to find the exact commit that caused it.
 
+## How you can help
+
+I'd like to create a list of all CPUs on which this bug occurs / doesn't occur.
+
+Please run `test.py` on your machines, and file an issue containing your finding (get your CPU info from `/proc/cpuinfo`; of course you have to test with a kernel >= 2.13).
+
+Bug present on:
+
+* `Intel(R) Core(TM) i5-2520M CPU @ 2.50GHz`
+
+Bug not present on:
+
+* empty
+
 ## Making a classifier to tell whether the bug is present
 
 As mentioned above, I could tell whether the bug is present by running `stress-ng -c2` a couple of times and looking at how quickly it finished.
