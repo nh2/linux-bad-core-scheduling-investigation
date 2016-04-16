@@ -32,7 +32,7 @@ Bug present on:
 
 Bug not present on:
 
-* empty
+* `Intel(R) Core(TM) i5-4590 CPU @ 3.30GHz`
 
 ## Making a classifier to tell whether the bug is present
 
