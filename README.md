@@ -24,7 +24,7 @@ So I bisected the kernel to find the exact commit that caused it.
 
 I'd like to create a list of all CPUs on which this bug occurs / doesn't occur.
 
-Please run `test.py` on your machines, and file an issue containing your finding (get your CPU info from `/proc/cpuinfo`; of course you have to test with a kernel >= 2.13).
+Please run `test.py` on your machines, and file an issue containing your finding (get your CPU info from `/proc/cpuinfo`; of course you have to test with a kernel >= 2.13). You may have to change the `relative_stdev` threshold if your machine doesn't have 1 CPU, 2 real cores and 4 virtual cores.
 
 Bug present on:
 
